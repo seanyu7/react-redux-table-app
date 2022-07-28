@@ -1,9 +1,21 @@
 import "./app.css";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 /*useSelectorはreduxのstateを取得するためのhookです*/
-
+import {addPost} from "./features/Post";
 function App() {
   const postlist = useSelector((state) => state.posts.value);
+
+  const dispatch = useDispatch();
+  
+  const handleClick = () => {
+dispatch(addPost(
+  {
+    id:0,
+    name:
+  content:
+  }
+))
+  };
 
   return <div className="App">
     <div>
@@ -12,13 +24,15 @@ function App() {
     <div className="addPost">
       <input type="text" placeholder="Name" />
       <input type="text" placeholder="Content" />
-      <button>Add</button>
+      <button onClick={() => handleClick()}>Add</button>
       <hr />
     </div>
     <div className="displayPosts">
       {postlist.map((post) => (
-         <div>
-          <h1>{post.name}</h1>
+         <div key={post.id} className="post">
+          <h1 className="postName">{post.name}</h1>
+          <h1 className="postContent">{post.content}</h1>
+          <button>delete</button>
          </div>
       ))}
      
