@@ -1,1 +1,14 @@
+body {
+  margin: 0;
+  font-family: -apple0system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  -webkit-font-smoothing: antialiased;
+  -moz-osz-font-smoothing: grayscale;
+  background-color: antiquewhite;
+}
 
+code{
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+}
