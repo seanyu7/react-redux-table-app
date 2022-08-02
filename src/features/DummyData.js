@@ -20,3 +20,5 @@ export const PostsData = [
       content: "エンジニアのスタバ",
     },
   ];
+
+  /*今回はhard codingにてデータを入れたが、ここはデータベースでも、firebase を使ってもいい */
